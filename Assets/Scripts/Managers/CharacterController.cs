@@ -59,12 +59,17 @@ public class CharacterController : MonoBehaviour
 
     private void GetMoveDirection()
     {
-        V3_moveDirection = InputManager.x.GetXZInputs();
+        //V3_moveDirection = InputManager.x.GetXZInputs();
     }
 
     private void GetIfJumped()
     {
         jumped = InputManager.x.GetJump();
+    }
+
+    public void Move(Vector3 dir)
+    {
+        V3_moveDirection = dir;
     }
 
 }
