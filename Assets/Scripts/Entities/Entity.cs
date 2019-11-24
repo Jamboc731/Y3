@@ -36,9 +36,9 @@ abstract public class Entity : MonoBehaviour
         
     }
 
-    public virtual void ChangeHealth(int _delta)
+    public virtual void ChangeHealth(int _i_delta)
     {
-        i_health += _delta;
+        i_health += _i_delta;
         if(i_health <= 0)
         {
             Die();
