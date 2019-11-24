@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Humanoid : Combatant
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class Humanoid : Combatant
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

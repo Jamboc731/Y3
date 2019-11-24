@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Mobile : Entity
 {
     // Start is called before the first frame update
@@ -15,4 +14,5 @@ public class Mobile : Entity
     {
         
     }
+
 }

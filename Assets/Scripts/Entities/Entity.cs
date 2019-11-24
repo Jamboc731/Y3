@@ -3,26 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Base class for all entities
-/// 
-/// <param i_health="health">Health of entitiy</param>
-/// <param rb="RigidBody">Health of entitiy</param>
+/// <param name="Entity">Abstract Class of all entities</param>
 /// </summary>
 [RequireComponent(typeof(Rigidbody))]
-
 abstract public class Entity : MonoBehaviour
 {
+    /// <summary>
+    /// <param name="health">Health of entitiy</param>
+    /// </summary>
     protected int i_health;
+    /// <summary>
+    /// <param name="RigidBody">Rigid body component</param>
+    /// </summary>
     protected Rigidbody rb;
 
     public virtual void Init()
     {
         rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Init();
     }
 
     // Update is called once per frame
@@ -36,9 +40,9 @@ abstract public class Entity : MonoBehaviour
         
     }
 
-    public virtual void ChangeHealth(int _delta)
+    public virtual void ChangeHealth(int _i_delta)
     {
-        i_health += _delta;
+        i_health += _i_delta;
         if(i_health <= 0)
         {
             Die();

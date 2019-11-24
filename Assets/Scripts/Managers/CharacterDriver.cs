@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public class CharacterController : MonoBehaviour
+public class CharacterDriver : MonoBehaviour
 {
+    #region publics
+    public Mobile mobile;
+    public InputManager im;
+    #endregion
+
     #region Privates
     private float f_moveSpeed, f_jumpForce;
     private bool jumped = false;
@@ -21,7 +25,7 @@ public class CharacterController : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = mobile.GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
@@ -59,7 +63,7 @@ public class CharacterController : MonoBehaviour
 
     private void GetMoveDirection()
     {
-        //V3_moveDirection = InputManager.x.GetXZInputs();
+        V3_moveDirection = im.GetXZInputs();
     }
 
     private void GetIfJumped()

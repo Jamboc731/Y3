@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : InputManager
+/// <summary>
+/// AI Controller to handle inputs from AIs theoretical controller.
+/// </summary>
+public class AIController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,4 +18,6 @@ public class PlayerController : InputManager
     {
         
     }
+
+
 }
