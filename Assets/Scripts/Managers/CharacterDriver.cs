@@ -11,7 +11,7 @@ public class CharacterDriver : MonoBehaviour
     #endregion
 
     #region Privates
-    private float f_moveSpeed, f_jumpForce;
+    [SerializeField][Range(0f, 50f)]private float f_moveSpeed, f_jumpForce;
     private bool jumped = false;
 
     private Vector3 V3_moveDirection;
@@ -64,6 +64,14 @@ public class CharacterDriver : MonoBehaviour
     private void GetMoveDirection()
     {
         V3_moveDirection = im.GetXZInputs();
+        if (V3_moveDirection != Vector3.zero)
+        {
+            mobile.example = EPlayerEnum.moving;
+        }
+        else
+        {
+            mobile.example = EPlayerEnum.idle;
+        }
     }
 
     private void GetIfJumped()

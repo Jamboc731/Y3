@@ -126,6 +126,8 @@ GameObject:
   - component: {fileID: 236968057}
   - component: {fileID: 236968056}
   - component: {fileID: 236968055}
+  - component: {fileID: 236968061}
+  - component: {fileID: 236968062}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -145,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1caba9186ed63d540babeffb279c8ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  example: 0
 --- !u!54 &236968056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -234,6 +237,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236968061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236968054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6d67035784e344cb85a772149301e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobile: {fileID: 236968055}
+  im: {fileID: 1015229558}
+  f_moveSpeed: 50
+  f_jumpForce: 0
+  f_xDrag: 0.85
+  f_yDrag: 0
+--- !u!114 &236968062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236968054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996bfea223927194f96cda013e4a6d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAction: 0
 --- !u!1 &563193104
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,8 +442,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015229560}
-  - component: {fileID: 1015229559}
   - component: {fileID: 1015229558}
+  - component: {fileID: 1015229559}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -434,13 +472,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015229557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6d67035784e344cb85a772149301e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 996bfea223927194f96cda013e4a6d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobile: {fileID: 236968055}
-  im: {fileID: 1015229558}
-  f_xDrag: 0
-  f_yDrag: 0
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAction: 0
 --- !u!4 &1015229560
 Transform:
   m_ObjectHideFlags: 0
@@ -603,6 +642,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9108378235952491349, guid: 7d628a05e2b41fc4385c5bb075119e85,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultKeyboardMaps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9108378235952491349, guid: 7d628a05e2b41fc4385c5bb075119e85,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultKeyboardMaps.Array.data[0]._enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d628a05e2b41fc4385c5bb075119e85, type: 3}

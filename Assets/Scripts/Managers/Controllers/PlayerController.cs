@@ -24,7 +24,6 @@ public class PlayerController : InputManager
 
         f_xInput = player.GetAxis("XInput");
         f_zInput = player.GetAxis("ZInput");
-        
     }
 
     public override Vector3 GetXZInputs()

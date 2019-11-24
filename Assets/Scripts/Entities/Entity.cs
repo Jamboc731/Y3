@@ -16,12 +16,15 @@ abstract public class Entity : MonoBehaviour
     /// <param name="RigidBody">Rigid body component</param>
     /// </summary>
     protected Rigidbody rb;
+    public EPlayerEnum example = EPlayerEnum.idle;
 
     public virtual void Init()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
+
+
 
     // Start is called before the first frame update
     void Start()
